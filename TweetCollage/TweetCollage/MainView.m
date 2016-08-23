@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "viewOne.h"
+#import "MainView.h"
 #import <STTwitter.h>
 #import "AppDelegate.h"
 
-@implementation viewOne
+@implementation MainView
 
 -(id)init{
     return [super init];
@@ -32,21 +32,21 @@
 -(IBAction)login:(id)sender
 {
     [self.view willRemoveSubview:sender];
-    AppDelegate* ref= (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    //AppDelegate* ref= (AppDelegate*)[[UIApplication sharedApplication] delegate];
     
-    [ref._twitter verifyCredentialsWithUserSuccessBlock:^(NSString *username, NSString *userID){
-        [self getTweetsWithHashTag:@"joy"];
-    } errorBlock:^(NSError *error)
-    {
-        NSLog([error localizedFailureReason]);
-    }];
+    //[ref._twitter verifyCredentialsWithUserSuccessBlock:^(NSString *username, NSString *userID){
+        [self getTweetsWithHashTag:[searchBarTextField text]];
+    //} errorBlock:^(NSError *error)
+    //{
+   //     NSLog([error localizedFailureReason]);
+    //}];
 }
 
 -(void) getTweetsWithHashTag:(NSString*) tagToSearch
 {
     AppDelegate* ref= (AppDelegate*)[[UIApplication sharedApplication] delegate];
     
-    [ref._twitter getSearchTweetsWithQuery:[NSString stringWithFormat:@"%23%@",tagToSearch]
+    [ref._twitter getSearchTweetsWithQuery:[NSString stringWithFormat:@"%23%@", tagToSearch]
                                    geocode:nil
                                       lang:nil
                                     locale:nil

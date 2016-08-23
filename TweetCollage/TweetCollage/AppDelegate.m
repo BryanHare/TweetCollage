@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <Accounts/Accounts.h>
+#import <Foundation/Foundation.h>
 
 @interface AppDelegate ()
 @end
@@ -19,13 +20,16 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    NSDictionary *theDict = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"creds" ofType:@"plist"]];
     
-    _twitter = [STTwitterAPI twitterAPIOSWithFirstAccountAndDelegate:self];
+    _twitter = [STTwitterAPI twitterAPIAppOnlyWithConsumerKey:[theDict objectForKey:@"ConsumerKey"]
+                                               consumerSecret:[theDict objectForKey:@"Consumer Secret"]];
     
     [_twitter verifyCredentialsWithUserSuccessBlock:^(NSString *username, NSString *userID) {
-        NSLog(@"Verified");
-    } errorBlock:^(NSError *error){
-        //Error
+        NSLog(@"Application Verification successful");
+        
+    } errorBlock:^(NSError *error) {
+        NSLog(@"Application Verification unsuccessful");
     }];
 
     return YES;

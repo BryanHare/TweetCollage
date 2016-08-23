@@ -9,14 +9,14 @@
 /* Begin PBXBuildFile section */
 		4483CBE38DEF9AE22AE7101B /* libPods-TweetCollage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E397ABC0A8829F132D53272 /* libPods-TweetCollage.a */; };
 		CE331C0B1D6BC71400C288C7 /* tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4150B61D6149C300B03D82 /* tweet.m */; };
-		CE331C0C1D6BC71B00C288C7 /* tabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC07A7C1D5BD81200705FD0 /* tabBarViewController.m */; };
-		CE331C0D1D6BC71E00C288C7 /* viewOne.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC07A7F1D5BD8F700705FD0 /* viewOne.m */; };
+		CE331C0D1D6BC71E00C288C7 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC07A7F1D5BD8F700705FD0 /* MainView.m */; };
 		CE331C0E1D6BC72000C288C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC07A651D5BD4D300705FD0 /* AppDelegate.m */; };
 		CE331C0F1D6BC72400C288C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC07A621D5BD4D300705FD0 /* main.m */; };
 		CEA862111D6BC982006E9B05 /* TweetCollage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEC07A6D1D5BD4D300705FD0 /* TweetCollage.xcdatamodeld */; };
 		CEC07A6C1D5BD4D300705FD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC07A6A1D5BD4D300705FD0 /* Main.storyboard */; };
 		CEC07A711D5BD4D300705FD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEC07A701D5BD4D300705FD0 /* Assets.xcassets */; };
 		CEC07A741D5BD4D300705FD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC07A721D5BD4D300705FD0 /* LaunchScreen.storyboard */; };
+		CEF2B1B31D6BE67C0006BCB1 /* creds.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEF2B1B21D6BE67C0006BCB1 /* creds.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,10 +32,9 @@
 		CEC07A701D5BD4D300705FD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEC07A731D5BD4D300705FD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEC07A751D5BD4D300705FD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CEC07A7B1D5BD7FF00705FD0 /* tabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = tabBarViewController.h; path = ../tabBarViewController.h; sourceTree = "<group>"; };
-		CEC07A7C1D5BD81200705FD0 /* tabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = tabBarViewController.m; path = ../tabBarViewController.m; sourceTree = "<group>"; };
-		CEC07A7E1D5BD8E100705FD0 /* viewOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = viewOne.h; sourceTree = "<group>"; };
-		CEC07A7F1D5BD8F700705FD0 /* viewOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = viewOne.m; sourceTree = "<group>"; };
+		CEC07A7E1D5BD8E100705FD0 /* MainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
+		CEC07A7F1D5BD8F700705FD0 /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
+		CEF2B1B21D6BE67C0006BCB1 /* creds.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = creds.plist; sourceTree = "<group>"; };
 		E2E2B4916CF9BC1DAA30A910 /* Pods-TweetCollage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetCollage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TweetCollage/Pods-TweetCollage.debug.xcconfig"; sourceTree = "<group>"; };
 		E8FB912AF70D6330C1405A0D /* Pods-TweetCollage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TweetCollage.release.xcconfig"; path = "Pods/Target Support Files/Pods-TweetCollage/Pods-TweetCollage.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,12 +91,11 @@
 			children = (
 				CE4150B61D6149C300B03D82 /* tweet.m */,
 				CE1DDE0B1D5FDF9A0016E2DC /* tweet.h */,
-				CEC07A7C1D5BD81200705FD0 /* tabBarViewController.m */,
-				CEC07A7B1D5BD7FF00705FD0 /* tabBarViewController.h */,
-				CEC07A7E1D5BD8E100705FD0 /* viewOne.h */,
-				CEC07A7F1D5BD8F700705FD0 /* viewOne.m */,
+				CEC07A7E1D5BD8E100705FD0 /* MainView.h */,
+				CEC07A7F1D5BD8F700705FD0 /* MainView.m */,
 				CEC07A641D5BD4D300705FD0 /* AppDelegate.h */,
 				CEC07A651D5BD4D300705FD0 /* AppDelegate.m */,
+				CEF2B1B21D6BE67C0006BCB1 /* creds.plist */,
 				CEC07A6A1D5BD4D300705FD0 /* Main.storyboard */,
 				CEC07A701D5BD4D300705FD0 /* Assets.xcassets */,
 				CEC07A721D5BD4D300705FD0 /* LaunchScreen.storyboard */,
@@ -178,6 +176,7 @@
 			files = (
 				CEC07A741D5BD4D300705FD0 /* LaunchScreen.storyboard in Resources */,
 				CEC07A711D5BD4D300705FD0 /* Assets.xcassets in Resources */,
+				CEF2B1B31D6BE67C0006BCB1 /* creds.plist in Resources */,
 				CEC07A6C1D5BD4D300705FD0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,9 +238,8 @@
 			files = (
 				CEA862111D6BC982006E9B05 /* TweetCollage.xcdatamodeld in Sources */,
 				CE331C0F1D6BC72400C288C7 /* main.m in Sources */,
-				CE331C0D1D6BC71E00C288C7 /* viewOne.m in Sources */,
+				CE331C0D1D6BC71E00C288C7 /* MainView.m in Sources */,
 				CE331C0E1D6BC72000C288C7 /* AppDelegate.m in Sources */,
-				CE331C0C1D6BC71B00C288C7 /* tabBarViewController.m in Sources */,
 				CE331C0B1D6BC71400C288C7 /* tweet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
